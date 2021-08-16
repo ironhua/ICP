@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title>小龙要饭系统</title>
+<meta name="keywords" content="小龙要饭系统">
+<meta name="description" content="小龙要饭系统">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.9">
+<link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://css.letvcdn.com/lc04_yinyue/201612/19/20/00/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<body background="https://ww2.sinaimg.cn/large/a15b4afegy1fpp139ax3wj200o00g073.jpg">
+<div class="container" style="padding-top:20px;">
+<div class="col-xs-12 col-sm-10 col-lg-8 center-block" style="float: none;">
+<div class="panel panel-primary">
+<div class="panel-heading" style="background: linear-gradient(to right,#8ae68a,#5ccdde,#b221ff);"><center><font color="#000000"><b>一只要饭的可怜的龙...</b></font></center></div>
+<div class="panel-body">
+<center><div class="alert alert-success"><a href="http://wpa.qq.com/msgrd?v=3&uin=80660202&site=qq&menu=yes" target="_blank"><img class="img-circle m-b-xs" style="border: 2px solid #1281FF; margin-left:3px; margin-right:3px;" src="https://q4.qlogo.cn/headimg_dl?dst_uin=80660202&spec=100"; width="60px" height="60px" alt="小龙要饭系统"><br></a>大哥哥大姐们啊！你们都是有钱的人呐～谁有那多余的零钱？给我这流浪的人啊...</div></center>
+<form name=alipayment action=pay.php method=post target="_blank">
+<center><div class="alert alert-warning">选择一种方式进行施舍...我爱你们！！！</div></center>
+<center>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+<div class="btn-group" role="group">
+<a class="btn btn-primary" href="/zfb.html">支付宝</a>
+</div>
+<div class="btn-group" role="group">
+<a class="btn btn-danger" href="/qq.html">QQ</a>
+</div>
+<div class="btn-group" role="group">
+<a class="btn btn-info" href="/wx.html">微信</a>
+</div>
+</div>
+</center>
+<br/>
+<center class="bgjb">
+<br/>
+<img class="img" src="/img/home.jpg" width="100%" />
+<br/><br/>
+</center>
+<br/>
+<audio autoplay="autoplay" loop="-1"height="100" width="100">
+<source src="music/yaofan.mp3" type="audio/mp3" />
+</audio>
+<div class="panel-heading" style="background: linear-gradient(to right,#CC99CC,#FFFF99,#66FF99);"><center><font color="red">Copyright © 2018-2020 <a href="https://yfan.ren" target="_blank">小龙</a>.</font></center></div>
+</form>
+</div>
+<style type="text/css">
+.img {
+	border: 10px solid;
+	border-image: -webkit-linear-gradient(#FF6666, #00CCFF) 30 30;
+	border-image: -o-linear-gradient(#FF6666, #00CCFF) 30 30;
+	border-image: -moz-linear-gradient(#FF6666, #00CCFF) 30 30;
+	border-image: linear-gradient(#FF6666, #00CCFF) 30 30;
+}
+.bgjb {
+	background: -webkit-linear-gradient(#66FF99, #66FFFF);
+	background: -o-linear-gradient(#66FF99, #66FFFF);
+	background: -moz-linear-gradient(#66FF99, #66FFFF);
+	background: linear-gradient(#66FF99, #66FFFF);
+}
+</style>
+<body>
+    <script type="text/javascript">
+    var a_idx = 0;
+    jQuery(document).ready(function($) {
+       $("body").click(function(e) {
+           var a = new Array("好饿", "饿", "要饭");
+           var $i = $("<span/>").text(a[a_idx]);
+           a_idx = (a_idx + 1) % a.length;
+           var x = e.pageX,
+           y = e.pageY;
+           $i.css({
+               "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+               "top": y - 20,
+               "left": x,
+               "position": "absolute",
+               "font-weight": "bold",
+               "color": "#ff6651"
+           });
+           $("body").append($i);
+           $i.animate({
+               "top": y - 180,
+               "opacity": 0
+           },
+           1500,
+           function() {
+               $i.remove();
+           });
+       });
+    });
+</script>
+</body>
+</html>
